@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
-    link(rel='stylesheet' href='/styles/main.css')
+    link(rel='stylesheet' href='styles/main.css')
     title The PIxEL Foundation
   body
     nav.navbar.navbar-default.navbar-pixel.navbar-fixed-top
@@ -14,12 +14,22 @@ html(lang='en')
           ul.nav.navbar-nav.navbar-right
             li
               a(href='#') About
-    video.bgvid(src='/343731697.mp4' autoplay preload='auto' loop)
+    video.bgvid(src='loop.m4v' autoplay preload='auto' loop)
     .px-jumbotron.bg.container
       .flex
       .flex-2
         include logo.svg
-      h2.flex Invest in education that matters.
+      //- h2.flex Invest in education that matters.
+      h2(style={
+        color: 'white',
+        padding: '5px',
+        width: '50%',
+        'margin-left': 'auto',
+        'margin-right': 'auto',
+        'margin-top': '-20%',
+        'text-align': 'center',
+        border: '4px solid white'
+      }) Invest in education that matters.
       .flex
     canvas#main-canvas.bg
     script(src="/scripts/main.js")
