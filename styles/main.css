@@ -1,0 +1,78 @@
+html {
+}
+
+body {
+  background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZTp40w_JH1BJdCYbMRQx3B0A2XrU4yeTVRnPcBLd5D-h1OooIDA);
+  height: 100%;
+}
+
+.navbar-pixel {
+  background-color: transparent;
+  border: 0;
+
+  /* overrides .navbar */
+  min-height: 72px;
+}
+
+/* overrides .navbar-fixed-top */
+.navbar-pixel .navbar-brand {
+  height: 72px;
+  /* padding: calc((72px - 20px) / 2) calc((72px - 20px) / 2); */
+  padding: 26px 26px;
+}
+
+.navbar-pixel .navbar-brand {
+  color: white;
+}
+
+.navbar-pixel .navbar-text {
+  color: white;
+}
+
+/* overrides .navbar-nav > li > a */
+.navbar-pixel .navbar-nav > li > a {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.navbar-pixel .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-pixel .navbar-nav > li > a:hover,
+.navbar-pixel .navbar-nav > li > a:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.px-jumbotron {
+  position: absolute;
+  /* top: 92px; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.px-jumbotron h1 {
+  font-size: 96px;
+}
+
+.flex,
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
