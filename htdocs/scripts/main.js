@@ -17,24 +17,20 @@ window.onload = function() {
     document.getElementById('logo-x').setAttribute('fill', '');
   }
 
-  drawCanvas();
-  window.addEventListener('resize', drawCanvas);
+  initCanvas();
 };
 
-function drawCanvas() {
+function initCanvas() {
   var svg = document.querySelector('svg');
-  var svgRect = svg.getBoundingClientRect();
-  var svgScale = svgRect.height / svg.viewBox.animVal.height;
   var canvas = document.getElementById('main-canvas');
   var x = document.getElementById('logo-x');
-  var rect = x.getBoundingClientRect();
   var vid = document.querySelector('video');
   var ctx = canvas.getContext('2d');
   ctx.save();
 
-  function rectToStyle(rect, el) {
-    el.width = rect.width / svgScale;
-    el.height = rect.height / svgScale;
+  function rectToStyle(rect, origRect, el) {
+    el.width = origRect.width;
+    el.height = origRect.height;
     el.style.top = rect.top + 'px';
     el.style.bottom = rect.bottom + 'px';
     el.style.left = rect.left + 'px';
@@ -43,18 +39,18 @@ function drawCanvas() {
     el.style.height = rect.height + 'px';
   }
 
-  rectToStyle(rect, canvas);
-
   var p = new Path2D('M 0 0 v 199 h 200 V0H0z m40.656 43h35.906L99.72 79.97 122.56 43h36.094l-38.406 57.313L161.28 161h-35.905L99.72 121.375 74.06 161H38l41.22-60.5L40.655 43z');
   svg.style.fill = '#fff';
   ctx.fillStyle = '#fff';
-  ctx.clip(p);
-  window.p = p;
-  window.ctx = ctx;
 
   function draw() {
+    rectToStyle(x.getBoundingClientRect(), x.getBBox(), canvas);
+    ctx.clip(p);
     ctx.drawImage(vid, 200, 380, 250, 250, 0, 0, 500, 500);
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
+
+  window.p = p;
+  window.ctx = ctx;
 }
