@@ -1,3 +1,7 @@
+window.requestAnimationFrame = window.requestAnimationFrame || function (func) {
+  return setTimeout(func, 0);
+};
+
 window.onload = function() {
 
   // this hack, thanks to: 
@@ -12,10 +16,9 @@ window.onload = function() {
   if(!isChrome) {
     document.getElementById('logo-x').setAttribute("fill", "");
   }
-};
 
-window.requestAnimationFrame = window.requestAnimationFrame || function (func) {
-  return setTimeout(func, 0);
+  drawCanvas();
+  window.addEventListener('resize', drawCanvas);
 };
 
 function drawCanvas() {
@@ -54,5 +57,3 @@ function drawCanvas() {
   }
   requestAnimationFrame(draw);
 }
-window.addEventListener('load', drawCanvas);
-window.addEventListener('resize', drawCanvas);
