@@ -14,7 +14,9 @@ html(lang='en')
           ul.nav.navbar-nav.navbar-right
             li
               a(href='#') About
-    video.bgvid(src='loop.mp4' autoplay preload='auto' loop)
+    video.bgvid(autoplay preload='auto' loop)
+      source(src='videos/loop.webm' type='video/webm')
+      source(src='videos/loop.mp4' type='video/mp4')
     .px-jumbotron.bg.container
       div
       div
