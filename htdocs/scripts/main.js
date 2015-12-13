@@ -13,8 +13,8 @@ window.onload = function() {
   var isChrome = !!window.chrome && !isOpera;
   var isIE = false || !!document.documentMode;
   
-  if(!isChrome) {
-    document.getElementById('logo-x').setAttribute("fill", "");
+  if (!isChrome && !isFirefox) {
+    document.getElementById('logo-x').setAttribute('fill', '');
   }
 
   drawCanvas();
@@ -23,7 +23,8 @@ window.onload = function() {
 
 function drawCanvas() {
   var svg = document.querySelector('svg');
-  var svgScale = svg.height.animVal.value / svg.viewBox.animVal.height;
+  var svgRect = svg.getBoundingClientRect();
+  var svgScale = svgRect.height / svg.viewBox.animVal.height;
   var canvas = document.getElementById('main-canvas');
   var x = document.getElementById('logo-x');
   var rect = x.getBoundingClientRect();
