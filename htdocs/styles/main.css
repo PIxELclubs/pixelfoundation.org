@@ -75,8 +75,13 @@ canvas {
   width: 100%;
 }
 
-.px-jumbotron h1 {
-  font-size: 96px;
+.px-jumbotron h2 {
+  color: white;
+  padding: 5px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid white;
 }
 
 /* Flexbox classes */
