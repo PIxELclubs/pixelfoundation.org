@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/styles/main.css')
+    title The PIxEL Foundation
+  body
+    nav.navbar.navbar-default.navbar-pixel.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') X
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') About
+    video.bgvid(src='/343731697.mp4' autoplay preload='auto' loop)
+    .px-jumbotron.bg.container
+      .flex
+      .flex-2
+        include logo.svg
+      h2.flex Invest in education that matters.
+      .flex
+    canvas#main-canvas.bg
+    script(src="/scripts/main.js")
+    // script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
