@@ -39,8 +39,8 @@ function initCanvas() {
     el.style.height = rect.height + 'px';
   }
 
-  var p = new Path2D('M 0 0 v 199 h 200 V0H0z m40.656 43h35.906L99.72 79.97 122.56 43h36.094l-38.406 57.313L161.28 161h-35.905L99.72 121.375 74.06 161H38l41.22-60.5L40.655 43z');
   svg.style.fill = '#fff';
+  var p = new Path2D('M 0 0 v 199 h 200 V0H0z m40.656 43h35.906L99.72 79.97 122.56 43h36.094l-38.406 57.313L161.28 161h-35.905L99.72 121.375 74.06 161H38l41.22-60.5L40.655 43z');
   ctx.fillStyle = '#fff';
 
   function draw() {
