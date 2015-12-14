@@ -1,0 +1,21 @@
+{
+  "name": "pxfoundation.org",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PIxEL Foundation Website",
+  "main": "htdocs/index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PIxELclubs/pxfoundation.org.git"
+  },
+  "author": "PIxEL Foundation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PIxELclubs/pxfoundation.org/issues"
+  },
+  "homepage": "https://github.com/PIxELclubs/pxfoundation.org#readme",
+  "devDependencies": {
+    "bower": "^1.7.1"
+  }
+}

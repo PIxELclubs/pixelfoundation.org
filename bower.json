@@ -1,0 +1,22 @@
+{
+  "name": "pxfoundation.org",
+  "description": "PIxEL Foundation Website",
+  "main": "htdocs/index.html",
+  "authors": [
+    "PIxEL Foundation"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/PIxELclubs/pxfoundation.org",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "canvas-5-polyfill": "~0.1.0"
+  }
+}
