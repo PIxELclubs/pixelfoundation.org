@@ -49,8 +49,6 @@ function initCanvas() {
     ctx.drawImage(vid, 200, 380, 250, 250, 0, 0, 500, 500);
     requestAnimationFrame(draw);
   }
-  requestAnimationFrame(draw);
 
-  window.p = p;
-  window.ctx = ctx;
+  requestAnimationFrame(draw);
 }
