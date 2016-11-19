@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "PIxEL Foundation Website",
-  "main": "htdocs/index.html",
+  "main": "index.html",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "url": "https://github.com/PIxELclubs/pxfoundation.org/issues"
   },
   "homepage": "https://github.com/PIxELclubs/pxfoundation.org#readme",
-  "devDependencies": {
-    "bower": "^1.7.1"
+  "dependencies": {
+    "canvas-5-polyfill": "^0.1.1"
   }
 }
